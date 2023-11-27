@@ -2,6 +2,7 @@ package com.learn.controller;
 
 import com.learn.model.Purchase;
 import com.learn.repository.PurchaseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class PurchaseController {
     private final PurchaseRepository purchaseRepository;
 
 
+    @Autowired
     public PurchaseController(PurchaseRepository purchaseRepository) {
         this.purchaseRepository = purchaseRepository;
     }

@@ -1,7 +1,7 @@
 package com.learn.repository;
 
-
 import com.learn.model.Purchase;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -12,6 +12,7 @@ import java.util.List;
 public class PurchaseRepository {
     private final JdbcTemplate jdbcTemplate;
 
+    @Autowired
     public PurchaseRepository(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
     }
